@@ -23,7 +23,7 @@ namespace DND_Scheduler
             var discord = new DiscordClient(new DiscordConfiguration()
             {
                 //Manually add token here
-                Token = "ODU0MDYwMzI2MDM4MTQyOTg2.YMebqQ.nJBtjtPhsygBvqhfDKDe0ArhKtM",
+                Token = "",
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.AllUnprivileged
             });
