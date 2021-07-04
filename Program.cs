@@ -12,8 +12,9 @@ namespace DND_Scheduler
     {
         static void Main(string[] args)
         {
-            Date d = new Date();
-            ImaGen.DateToCalImage(d);
+            Date d = new Date(7,5, 2021);
+            d.BlockMinutes(444, 890);
+            ImaGen.DateToCalImg(d, "TestMonday");
             MainAsync().GetAwaiter().GetResult();
         }
 
@@ -22,7 +23,7 @@ namespace DND_Scheduler
             var discord = new DiscordClient(new DiscordConfiguration()
             {
                 //Manually add token here
-                Token = "",
+                Token = "ODU0MDYwMzI2MDM4MTQyOTg2.YMebqQ.nJBtjtPhsygBvqhfDKDe0ArhKtM",
                 TokenType = TokenType.Bot,
                 Intents = DiscordIntents.AllUnprivileged
             });
