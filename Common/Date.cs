@@ -14,7 +14,17 @@ namespace DND_Scheduler.Common
         public Date()                                                                                          
         {
             Minutes = new bool[1440];                                                                          
-        }                                                                                                      
+        } 
+        public Date(int m, int d, int y)
+        {
+            Minutes = new bool[1440];
+            if (m < 13 && m > 0)
+                Month = m;
+            if (d < 32 && d > 0)
+                Day = d;
+            if (y >= 2021)
+                Year = y;
+        }
         public int BlockMinutes(int startIndex, int endIndex)                                                  
         {                                                                                                
             if (startIndex < 0 || endIndex > 1439)                                                       
